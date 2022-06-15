@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Libre Franklin';
+	font-size: 10px;
+	color: white;
+}
+
+body {
+	background-color: #000;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	background:  linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.3));
+	width: 100vw;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+
+nav li a {
+	text-align: center;
+	margin: 5px;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: 400	;
+}
+
+.everything {
+	position: fixed;
+	bottom: 0;
+	height: 90vh;
+	width: 100vw;
+}
+
+header {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(docs/images/header-background.jpg);
+	background-size: cover;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__text h1{
+	font-size: 15rem;
+	font-weight: 600;
+	letter-spacing: 1.5rem;
+}
+
+.header__text h2 {
+	text-align: center;
+	letter-spacing: 2rem;
+}
