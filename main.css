@@ -1,60 +1,175 @@
+/*FONT*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap');
 
+/*VARIABLES*/
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-primary: #b2bec3;
+	--color-secondary: #55efc4;
+} 
+
+
+
+
+/*BASE*/
 * {
 	padding: 0;
 	margin: 0;
 	font-family: 'Libre Franklin';
 	font-size: 10px;
-	color: white;
+	color: var(--color-white);
+	scroll-behavior: smooth;
 }
 
 body {
 	background-color: #000;
 }
 
-nav {
-	position: fixed;
-	top: 0;
-	background:  linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.3));
-	width: 100vw;
-	height: 10vh;
+
+
+
+	
+/*ABSTRACTS*/
+.flex-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.ff__heading {
+	font-size: 10rem;
+	margin-bottom: 5rem;
+	text-align: center;
+}
+
+.ff__heading--medium {
+	font-size: 6rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.ff__paragraph {
+	font-size: 1.5rem;
+	line-height: 3rem;
+	color: var(--color-primary);
+	font-weight: 400;
+}
+
+.button {
+	padding: 1rem 5rem;
+	border-radius: 5rem;
+	color: var(--color-primary);
+	background-color: var(--color-black);
+}
+
+.button--selected {
+	border: 2px solid var(--color-secondary);
+}
+
+
+.super-text {
+	color: var(--color-secondary);
+}
+
+
+
+
+
+
+/*LAYOUT*/
+nav {
+	position: fixed;
+	top: 0;
+	background:  linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.01));
+	width: 100vw;
+	height: 10vh;
+}
+
+li {
 	list-style: none;
+}
+
+a {
+	text-decoration: none;
 }
 
 nav li a {
 	text-align: center;
 	margin: 5px;
-	text-decoration: none;
-	font-size: 1.5rem;
-	font-weight: 400	;
+	font-size: 1.25rem;
 }
 
-.everything {
-	position: fixed;
-	bottom: 0;
-	height: 90vh;
-	width: 100vw;
-}
-
-header {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(docs/images/header-background.jpg);
+.hero {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(docs/images/header-background.jpg);
+	background-attachment: fixed;
 	background-size: cover;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 100vh;
 }
 
-.header__text h1{
-	font-size: 15rem;
+.hero__text h1 {
+	font-size: 20rem;
 	font-weight: 600;
-	letter-spacing: 1.5rem;
 }
 
-.header__text h2 {
-	text-align: center;
-	letter-spacing: 2rem;
+section {
+	min-height: auto;
+	border-bottom: 2px solid var(--color-secondary);
+	padding: 10rem 0;
+	margin: 0 25rem;
+}
+
+#lang {
+	position: absolute;
+	left: 2rem;
+	transform: translateY(-5rem);
+	border-radius: 5rem;
+	background-color: var(--color-black);
+	padding: 1rem 0;
+}
+
+.history__pouch {
+	display: flex;
+	column-gap: 5rem;
+}
+
+.history__pouch p {
+	flex: 2;
+}
+
+.history__pouch img {
+	flex: 1;
+}
+
+#events {
+	min-height: 50vh;
+}
+
+.event__pouch {
+	display: flex;
+	flex-direction: column;
+}
+.event__pouch div {
+	flex: 1;
+}
+.event__row {
+	display: flex;
+}
+.event__row div {
+	height: 20vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.event__row--text {
+	flex-direction: column;
+}
+
+.event__row--text p {
+	color: var(--color-secondary);
+}
+
+.event__row--team1 img, .event__row--team2 img {
+	width: 120px;
 }
