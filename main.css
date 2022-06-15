@@ -12,6 +12,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*BASE*/
 * {
 	padding: 0;
@@ -25,6 +38,20 @@
 body {
 	background-color: #000;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -71,6 +98,19 @@ body {
 .super-text {
 	color: var(--color-secondary);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -139,6 +179,8 @@ section {
 
 .history__pouch img {
 	flex: 1;
+	width: 240px;
+	object-fit: cover;
 }
 
 #events {
