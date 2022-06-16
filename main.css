@@ -7,6 +7,7 @@
 	--color-black: #000;
 	--color-primary: #b2bec3;
 	--color-secondary: #55efc4;
+	--color-tertiary: #0d0d0d;
 } 
 
 
@@ -67,11 +68,10 @@ body {
 .ff__heading {
 	font-size: 10rem;
 	margin-bottom: 5rem;
-	text-align: center;
 }
 
 .ff__heading--medium {
-	font-size: 6rem;
+	font-size: 5rem;
 	margin-bottom: 1rem;
 	text-align: center;
 }
@@ -145,6 +145,7 @@ nav li a {
 	background-attachment: fixed;
 	background-size: cover;
 	height: 100vh;
+	border-radius: 5rem;
 }
 
 .hero__text h1 {
@@ -154,7 +155,7 @@ nav li a {
 
 section {
 	min-height: auto;
-	border-bottom: 2px solid var(--color-secondary);
+	border-bottom: 2px solid var(--color-tertiary);
 	padding: 10rem 0;
 	margin: 0 25rem;
 }
@@ -177,14 +178,14 @@ section {
 	flex: 2;
 }
 
+.history__pouch p:first-letter {
+	color: var(--color-secondary);
+}
+
 .history__pouch img {
 	flex: 1;
 	width: 240px;
 	object-fit: cover;
-}
-
-#events {
-	min-height: 50vh;
 }
 
 .event__pouch {
@@ -215,3 +216,5 @@ section {
 .event__row--team1 img, .event__row--team2 img {
 	width: 120px;
 }
+
+.event
