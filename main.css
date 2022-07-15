@@ -138,6 +138,7 @@ nav li a {
 	text-align: center;
 	margin: 5px;
 	font-size: 1.25rem;
+	color: var(--color-white);
 }
 
 .hero {
@@ -155,9 +156,9 @@ nav li a {
 
 section {
 	min-height: auto;
-	border-bottom: 2px solid var(--color-tertiary);
+	border-bottom: 2px solid var(--color-secondary);
 	padding: 10rem 0;
-	margin: 0 25rem;
+	margin: 0 25vw;
 }
 
 #lang {
@@ -188,33 +189,3 @@ section {
 	object-fit: cover;
 }
 
-.event__pouch {
-	display: flex;
-	flex-direction: column;
-}
-.event__pouch div {
-	flex: 1;
-}
-.event__row {
-	display: flex;
-}
-.event__row div {
-	height: 20vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.event__row--text {
-	flex-direction: column;
-}
-
-.event__row--text p {
-	color: var(--color-secondary);
-}
-
-.event__row--team1 img, .event__row--team2 img {
-	width: 120px;
-}
-
-.event
