@@ -24,9 +24,23 @@ li {
     list-style: none;
 }
 
-.navbox__top li{
+.navbox__top--logo {
     display: flex;
     justify-content: center;
+}
+
+.navbox__top--logo img {
+    width: 10rem;
+    top: 3em;
+    padding-top: 1rem;
+}
+
+.navbox__top {
+    position: sticky;
+    top: 0;
+}
+.navbox__top li{
+    width: 100vw;
     padding: 1rem 0;
     background-color: var(--color-black);
     border-bottom: 2px solid var(--color-grey);
@@ -34,6 +48,7 @@ li {
 
 .navbox__top li h1 {
     font-size: 2rem;
+    text-align: center;
 }
 
 .navbox__bottom {
@@ -65,3 +80,7 @@ li {
     color: var(--color-black);
     border-radius: 50px;
 }
+
+ #about {
+    height: 200vh;
+ }
