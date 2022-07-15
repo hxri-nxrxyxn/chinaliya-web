@@ -3,6 +3,8 @@
 :root {
     --color-black: #000;
     --color-white: #fff;
+    --color-grey: #050505;
+    --color-primary: #55EFC4;
 }
 
 * {
@@ -11,6 +13,7 @@
     box-sizing: border-box;
     font-family: Libre Franklin;
     font-size: 10px;
+    color: var(--color-white);
 }
 
 body {
@@ -24,10 +27,41 @@ li {
 .navbox__top li{
     display: flex;
     justify-content: center;
-    margin: 1rem 0;
+    padding: 1rem 0;
     background-color: var(--color-black);
+    border-bottom: 2px solid var(--color-grey);
 }
 
 .navbox__top li h1 {
     font-size: 2rem;
+}
+
+.navbox__bottom {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+}
+
+.navbox__bottom li {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: var(--color-black);
+    border-top: 2px solid var(--color-grey);
+}
+
+.navbox__bottom li a {
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+
+}
+.navbox__bottom li a.super {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border-radius: 50px;
 }
