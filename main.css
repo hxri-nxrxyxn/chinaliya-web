@@ -8,15 +8,15 @@
 	--color-border: #0F0F0F;
 	--layout-spacing: 3rem;
 }
-
-/*:root {
+/* 
+:root {
     --color-primary: #00b894;
     --color-secondary: #fff;
     --color-tertiary: #000;
     --color-text: #636e72;
-    --color-border: #e7e7e7;
+    --color-border: #f7f7f7;
     --layout-spacing: 3rem;
-}*/
+} */
 
 * {
     padding: 0;
@@ -63,7 +63,8 @@ span {
     padding: 1rem 0;
     background-color: var(--color-secondary);
     border-bottom: 2px solid var(--color-border);
-    border-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .navbox__top li h1 {
@@ -83,6 +84,7 @@ span {
     padding: 1.4rem 0;
     background-color: var(--color-secondary);
     border-top: 2px solid var(--color-border);
+    border-radius: 50px;
 }
 
 .navbox__bottom li a {
@@ -94,6 +96,7 @@ span {
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     border-radius: 50px;
+    transition: background-color linear 0.3s;
 }
 
 .navbox__bottom li :hover {
@@ -108,11 +111,15 @@ span {
 .abs__pouch {
     margin: var(--layout-spacing);
     padding: var(--layout-spacing);
-    border-left: solid var(--color-border);
-    border-bottom: solid var(--color-border);
-    border-radius: 50px;
+    border-radius: 10px;
+    background-color:var(--color-border);
+    border: 2px solid transparent;
+    transition: border ease 0.3s;
 }
 
+.abs__pouch:hover {
+    border: 2px solid var(--color-primary);
+}
 .abs__pouch--border {
     background-color: var(--color-border);
     border: 2px solid var(--color-primary);
@@ -140,6 +147,7 @@ span {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .abs__spacer {
@@ -151,14 +159,20 @@ span {
         font-size: 	10px;
     }
     .abs__pouch {
-        margin: 2rem 2rem;
-        max-width: 60%
+        margin: var(--layout-spacing);
+        max-width: 45%;
     }
     .abs__spacer {
     	display: none;
     }
     .navbox__bottom {
-    	display: none;
+        position: initial;
+        
+        width: 25vw;
+        margin: 0 auto;
+    }
+    .navbox__bottom li {
+        border: none;    
     }
 }
 
