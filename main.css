@@ -22,7 +22,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Libre Franklin;
+    font-family: 'Libre Franklin', sans;
     color: var(--color-tertiary);
 }
 
@@ -40,13 +40,32 @@ li {
 
 span {
     color: var(--color-primary);
-    font-size: small;
+    font-size: 1rem;
     font-weight: 600;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .navbox__top--logo {
     display: flex;
     justify-content: center;
+    background-color: var(--color-secondary);
 }
 
 .navbox__top--logo img {
@@ -108,71 +127,58 @@ span {
     color: var(--color-secondary);
 }
 
-.abs__pouch {
+.pouch {
     margin: var(--layout-spacing);
     padding: var(--layout-spacing);
     border-radius: 10px;
-    background-color:var(--color-border);
     border: 2px solid transparent;
     transition: border ease 0.3s;
 }
 
-.abs__pouch:hover {
-    border: 2px solid var(--color-primary);
-}
-.abs__pouch--border {
-    background-color: var(--color-border);
-    border: 2px solid var(--color-primary);
-    border-radius: 50px;
-    margin: var(--layout-spacing);
-    padding: var(--layout-spacing) 0;
+.pouch--filled {
+    background-color:var(--color-border);
 }
 
-.abs__pouch * {
+.pouch--outlined {
+    border: 2px solid var(--color-border);
+}
+
+.pouch:hover {
+    border: 2px solid var(--color-primary);
+}
+
+.pouch * {
     margin: 1rem 0;
 }
 
-.abs__pouch h2 {
-    font-size: 2.6rem;
-}
-
-.abs__pouch p {
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1.5;
-    color: var(--color-text);
-}
-
-.abs__pouch img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
 .abs__spacer {
-    height: 20vh;
+    height: 5.7rem;
 }
 
 @media screen and (min-width: 800px) {
     html {
         font-size: 	10px;
     }
-    .abs__pouch {
-        margin: var(--layout-spacing);
-        max-width: 45%;
+    .pouch {
+        margin: var(--layout-spacing) auto;
+        max-width: 50%;
     }
     .abs__spacer {
     	display: none;
     }
     .navbox__bottom {
         position: initial;
-        
         width: 25vw;
-        margin: 0 auto;
+        margin: var(--layout-spacing) auto;
     }
     .navbox__bottom li {
         border: none;    
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 14px;
     }
 }
 
