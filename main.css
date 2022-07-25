@@ -8,8 +8,8 @@
 	--color-border: #0F0F0F;
 	--layout-spacing: 3rem;
 }
-/* 
-:root {
+
+/* :root {
     --color-primary: #00b894;
     --color-secondary: #fff;
     --color-tertiary: #000;
@@ -118,7 +118,7 @@ img {
     transition: background-color linear 0.3s;
 }
 
-.navbox__bottom li :hover {
+.navbox__bottom li a:hover {
     background-color: var(--color-border);
 }
 

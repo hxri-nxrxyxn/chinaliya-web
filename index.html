@@ -5,9 +5,51 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="docs/style/animations.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 	<title>Document</title>
 </head>
 <body>
+
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function() { 
+		   $('#events').click(function(){
+			  $('#bag').load('events.html #bag', function beSuper() {
+				var element = document.getElementById("events");
+                element.classList.add("super");
+				var element = document.getElementById("home");
+                element.classList.remove("super");
+				var element = document.getElementById("gallery");
+                element.classList.remove("super");
+			  });
+		   });
+		});
+
+		$(document).ready(function() { 
+		   $('#gallery').click(function(){
+			  $('#bag').load('gallery.html #bag', function beSuper() {
+				var element = document.getElementById("gallery");
+                element.classList.add("super");
+				var element = document.getElementById("home");
+                element.classList.remove("super");
+				var element = document.getElementById("events");
+                element.classList.remove("super");
+			  });
+		   });
+		});
+
+		$(document).ready(function() { 
+		   $('#home').click(function(){
+			  $('#bag').load('index.html #bag', function beSuper() {
+				var element = document.getElementById("home");
+                element.classList.add("super");
+				var element = document.getElementById("events");
+                element.classList.remove("super");
+				var element = document.getElementById("gallery");
+                element.classList.remove("super");
+			  });
+		   });
+		});
+	</script>
 
 	<nav class="navbox__top--logo">
 		<img src="docs/images/team1.png" alt="chinalia-logo" width="20px">
@@ -25,41 +67,45 @@
 
 	<nav class="navbox__bottom">
 		<li>
-			<a href="">EVENTS</a>
-			<a href="" class="super">HOME</a>
-			<a href="">GALLERY</a>
+			<a id="events" onclick="beSuper">EVENTS</a>
+			<a id="home" class="super"  onclick="beSuper">HOME</a>
+			<a id="gallery" onclick="beSuper">GALLERY</a>
 		</li>
 	</nav>
 
-	<section id="about" class="pouch pouch--filled">
-		<h2>
-			<span>SINCE 1994</span>
-			<br>
-			CHINALIYA
-		</h2>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi dolore consequuntur voluptatum molestiae repellendus nemo, omnis quaerat dignissimos reiciendis et porro, vero quibusdam doloremque id nam odio. Reiciendis, eveniet? Soluta error, perspiciatis qui eaque illum ex tenetur, eius provident assumenda sed nesciunt. Fugit, fuga pariatur? Possimus dolorum iure ratione qui sunt quo perferendis nemo, doloribus quidem, iste expedita provident odio!</p>
-	</section>
+	<div id="bag">
+		
+		<section id="about" class="pouch pouch--filled">
+			<h2>
+				<span>SINCE 1994</span>
+				<br>
+				CHINALIYA
+			</h2>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi dolore consequuntur voluptatum molestiae repellendus nemo, omnis quaerat dignissimos reiciendis et porro, vero quibusdam doloremque id nam odio. Reiciendis, eveniet? Soluta error, perspiciatis qui eaque illum ex tenetur, eius provident assumenda sed nesciunt. Fugit, fuga pariatur? Possimus dolorum iure ratione qui sunt quo perferendis nemo, doloribus quidem, iste expedita provident odio!</p>
+		</section>
 
-	<section class="pouch pouch--outlined">
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias dolorem voluptas, rerum, veritatis vitae esse modi tempora nulla eos voluptatum quia obcaecati magni distinctio, corporis dignissimos. Hic, minus eaque.</p>
-	</section>
+		<section class="pouch pouch--outlined">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias dolorem voluptas, rerum, veritatis vitae esse modi tempora nulla eos voluptatum quia obcaecati magni distinctio, corporis dignissimos. Hic, minus eaque.</p>
+		</section>
 
-	<section id="history" class="pouch pouch--filled">
-		<h2>
-			<span>LISTEN OUR</span>
-			<br>
-			HISTORY
-		</h2>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dignissimos error sed a earum laboriosam, ex dolores tempore nobis consectetur illo iusto laudantium veniam? Laboriosam tempore vitae fugit molestiae libero.</p>
-		<img src="docs/images/header-background.jpg" alt="image" width="320" height="240">
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, odio architecto? Vel ea aperiam saepe quidem esse molestias error blanditiis! Quos at repudiandae quaerat aliquid, vero molestiae doloremque laborum ex impedit, unde, dolores perferendis! Animi optio quo cum sit, facilis vero dolores? Incidunt sit esse in qui asperiores. Nam harum repellat eius, ratione molestias a, exercitationem excepturi, explicabo in magni quis temporibus corrupti. Nulla impedit, sunt, vel facilis quae ex aspernatur quasi illum corporis et illo vero doloremque molestias laborum officia, nisi cum iste voluptate maiores dolorum. Corporis, quaerat consequatur!</p>
-	</section>
+		<section id="history" class="pouch pouch--filled">
+			<h2>
+				<span>LISTEN OUR</span>
+				<br>
+				HISTORY
+			</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dignissimos error sed a earum laboriosam, ex dolores tempore nobis consectetur illo iusto laudantium veniam? Laboriosam tempore vitae fugit molestiae libero.</p>
+			<img src="docs/images/header-background.jpg" alt="image" width="320" height="240">
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, odio architecto? Vel ea aperiam saepe quidem esse molestias error blanditiis! Quos at repudiandae quaerat aliquid, vero molestiae doloremque laborum ex impedit, unde, dolores perferendis! Animi optio quo cum sit, facilis vero dolores? Incidunt sit esse in qui asperiores. Nam harum repellat eius, ratione molestias a, exercitationem excepturi, explicabo in magni quis temporibus corrupti. Nulla impedit, sunt, vel facilis quae ex aspernatur quasi illum corporis et illo vero doloremque molestias laborum officia, nisi cum iste voluptate maiores dolorum. Corporis, quaerat consequatur!</p>
+		</section>
 
-	<section class="pouch">
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo dignissimos porro, consectetur cumque voluptatum corrupti animi doloremque debitis asperiores vel non, voluptatem velit officia, dolorem amet laborum illum quibusdam voluptate voluptates aspernatur saepe magnam repellat magni. Culpa facere sit quidem fuga enim repudiandae sed assumenda, dignissimos eius minima, aperiam tenetur possimus. Harum numquam molestiae cupiditate dolorem soluta possimus ipsum ullam necessitatibus modi, adipisci nisi corrupti deserunt! Voluptatibus explicabo quas at veritatis ipsa, molestiae asperiores laborum optio placeat doloremque. Porro, minus fuga doloribus culpa nemo accusamus cum explicabo autem magnam! Quisquam.</p>
-	</section>
+		<section class="pouch">
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo dignissimos porro, consectetur cumque voluptatum corrupti animi doloremque debitis asperiores vel non, voluptatem velit officia, dolorem amet laborum illum quibusdam voluptate voluptates aspernatur saepe magnam repellat magni. Culpa facere sit quidem fuga enim repudiandae sed assumenda, dignissimos eius minima, aperiam tenetur possimus. Harum numquam molestiae cupiditate dolorem soluta possimus ipsum ullam necessitatibus modi, adipisci nisi corrupti deserunt! Voluptatibus explicabo quas at veritatis ipsa, molestiae asperiores laborum optio placeat doloremque. Porro, minus fuga doloribus culpa nemo accusamus cum explicabo autem magnam! Quisquam.</p>
+		</section>
 
-	<div class="abs__spacer"></div>
+		<div class="abs__spacer"></div>
+
+	</div>
 
 </body>
 </html>
