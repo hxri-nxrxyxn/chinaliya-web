@@ -164,6 +164,10 @@ img {
     transition: border ease 0.3s;
 }
 
+.pouch * {
+    margin: 1rem 0;
+}
+
 .pouch--filled {
     background-color:var(--color-border);
 }
@@ -174,10 +178,6 @@ img {
 
 .pouch:hover {
     border: 2px solid var(--color-primary);
-}
-
-.pouch * {
-    margin: 1rem 0;
 }
 
 form {
@@ -285,14 +285,10 @@ form button {
         display: flex;
     }
 
-    img.blurred {
-        filter: blur(100px);
-        transition: all ease 0.3s;
+    .gallery__column:hover {
+        transform: scale(1.01);
     }
-    
-    img.blurred:hover {
-       filter: blur(0);
-    }
+
 }
 
 @media screen and (min-width: 1920px) {

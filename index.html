@@ -21,6 +21,8 @@
                 element.classList.remove("super");
 				var element = document.getElementById("gallery");
                 element.classList.remove("super");
+				var element = document.getElementById("contact");
+                element.classList.remove("super");
 			  });
 		   });
 		});
@@ -33,6 +35,23 @@
 				var element = document.getElementById("home");
                 element.classList.remove("super");
 				var element = document.getElementById("events");
+                element.classList.remove("super");
+				var element = document.getElementById("contact");
+                element.classList.remove("super");
+			  });
+		   });
+		});
+
+		$(document).ready(function() { 
+		   $('#contact').click(function(){
+			  $('#bag').load('contact.html #bag', function beSuper() {
+				var element = document.getElementById("contact");
+                element.classList.add("super");
+				var element = document.getElementById("home");
+                element.classList.remove("super");
+				var element = document.getElementById("events");
+                element.classList.remove("super");
+				var element = document.getElementById("gallery");
                 element.classList.remove("super");
 			  });
 		   });
@@ -67,16 +86,17 @@
 			<h1>
 				Chinaliya 
 				<br>
-				<span> Sports Club</span>
+				<span class="small">Moorkanad</span>
 			</h1>
 		</li>
 	</nav>
 
 	<nav class="navbox__bottom">
 		<li>
-			<a id="events" onclick="beSuper">EVENTS</a>
 			<a id="home" class="super"  onclick="beSuper">HOME</a>
 			<a id="gallery" onclick="beSuper">GALLERY</a>
+			<a id="events" onclick="beSuper">EVENTS</a>
+			<a id="contact" onclick="beSuper">CONTACT</a>
 		</li>
 	</nav>
 
@@ -86,7 +106,7 @@
 			<h2>
 				<span class="small">SINCE 1994</span>
 				<br>
-				Chinaliya Sports Club, Moorkanad
+				Chinaliya Arts & Sports Club, Moorkanad
 			</h2>
 			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi dolore consequuntur voluptatum molestiae repellendus nemo, omnis quaerat dignissimos reiciendis et porro, vero quibusdam doloremque id nam odio. Reiciendis, eveniet? Soluta error, perspiciatis qui eaque illum ex tenetur, eius provident assumenda sed nesciunt. Fugit, fuga pariatur? Possimus dolorum iure ratione qui sunt quo perferendis nemo, doloribus quidem, iste expedita provident odio!</p>
 		</section>
@@ -102,25 +122,12 @@
 				HISTORY
 			</h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dignissimos error sed a earum laboriosam, ex dolores tempore nobis consectetur illo iusto laudantium veniam? Laboriosam tempore vitae fugit molestiae libero.</p>
-			<img src="docs/images/header-background.jpg" alt="image" width="320" height="240" class="blurred">
+			<img src="docs/images/header-background.jpg" alt="image" width="320" height="240"0>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsa officia expedita aut debitis praesentium reprehenderit minus numquam provident dolor consequuntur, nostrum placeat assumenda, quaerat doloribus esse eligendi totam nobis.</p>
 			<br>
 			<div id="read-more-contents">
 				<a id="read-more" class="pill pill--filled" onclick='hideMe'>READ MORE</a>
 			</div>
-		</section>
-
-		<section class="pouch pouch--outlined">
-			<h2>Have Questions?</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci id sit deserunt! Consequuntur fugiat autem voluptates, quas neque incidunt alias? Voluptates quod nihil eos fugiat aliquid accusantium suscipit corporis dolores.</p>
-			<form
-			action="https://formspree.io/f/mayvrkqr"
-			method="POST">
-				<input type="email" name="email" placeholder="Your Email" required>
-				<input type="text" name="name" placeholder="Your Name">
-				<textarea name="message" placeholder="Your Message" rows="8" required></textarea>
-				<input type="submit" class="pill pill--filled" value="SEND">
-		  	</form>
 		</section>
 
 		<div class="abs__spacer"></div>
