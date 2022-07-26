@@ -32,6 +32,11 @@ html {
 
 body {
     background-color: var(--color-secondary);
+    cursor: cell;
+}
+
+a {
+    text-decoration: none;
 }
 
 li {
@@ -40,6 +45,9 @@ li {
 
 span {
     color: var(--color-primary);
+}
+
+span.small {
     font-size: 1rem;
     font-weight: 600;
 }
@@ -95,19 +103,19 @@ img {
     position: fixed;
     width: 100vw;
     bottom: 0;
+    background-color: var(--color-secondary);
+    border-top: 2px solid var(--color-border);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .navbox__bottom li {
     display: flex;
     justify-content: center;
     padding: 1.4rem 0;
-    background-color: var(--color-secondary);
-    border-top: 2px solid var(--color-border);
-    border-radius: 50px;
 }
 
 .navbox__bottom li a {
-    text-decoration: none;
     text-align: center;
     flex: 1;
     font-weight: 600;
@@ -115,7 +123,7 @@ img {
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     border-radius: 50px;
-    transition: background-color linear 0.3s;
+    transition: all linear 0.3s;
 }
 
 .navbox__bottom li a:hover {
@@ -125,6 +133,26 @@ img {
 .navbox__bottom li a.super {
     background-color: var(--color-primary);
     color: var(--color-secondary);
+}
+
+.pill {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all linear 0.3s;
+}
+
+.pill--filled {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.pill--outlined {
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 .pouch {
@@ -156,29 +184,69 @@ img {
 }
 
 @media screen and (min-width: 800px) {
+
     html {
-        font-size: 	10px;
+        font-size: 10px;
     }
+
     .pouch {
         margin: var(--layout-spacing) auto;
         max-width: 50%;
     }
+
     .abs__spacer {
     	display: none;
     }
+
     .navbox__bottom {
-        position: initial;
-        width: 25vw;
-        margin: var(--layout-spacing) auto;
+        position: sticky;
+        top: 0;
+        bottom: initial;
+        width: 100vw;
+        background-color: var(--color-secondary);
+        border: none;
     }
-    .navbox__bottom li {
-        border: none;    
+
+    .navbox__bottom li {    
+        border: none;
+        width: 45vw;
+        margin: 0 auto;
+    }
+
+    .navbox__top--logo { 
+        display: none;
+    }
+
+    .navbox__top {
+        position: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)),url('docs/images/header-background.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .navbox__top li {
+        border: none;
+        background-color: transparent;
+    }
+
+    .navbox__top li h1 {
+        font-size: 14rem;
+    }
+
+    .navbox__top li h1 span {
+        display: none;
     }
 }
 
 @media screen and (min-width: 1920px) {
+
     html {
         font-size: 14px;
     }
+
 }
 

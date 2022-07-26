@@ -3,10 +3,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="shortcut icon" href="docs/images/team1.png" type="image/x-icon">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="docs/style/animations.css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-	<title>Document</title>
+	<title>Chilaniya Sports Club | Moorkanad</title>
 </head>
 <body>
 
@@ -49,6 +50,12 @@
 			  });
 		   });
 		});
+
+		$(document).ready(function() { 
+		   $(document).on("click", "#read-more", function(){
+			  $('#read-more-contents').load('misc.html #read-more-contents')
+		   });
+		});
 	</script>
 
 	<nav class="navbox__top--logo">
@@ -58,9 +65,8 @@
 	<nav class="navbox__top">
 		<li>
 			<h1>
-				CHINALIYA
+				Chilaniya <span> Sports Club</span>
 				<br>
-				<span>MOORKANAD</span>
 			</h1>
 		</li>
 	</nav>
@@ -74,10 +80,10 @@
 	</nav>
 
 	<div id="bag">
-		
+
 		<section id="about" class="pouch pouch--filled">
 			<h2>
-				<span>SINCE 1994</span>
+				<span class="small">SINCE 1994</span>
 				<br>
 				CHINALIYA
 			</h2>
@@ -90,13 +96,17 @@
 
 		<section id="history" class="pouch pouch--filled">
 			<h2>
-				<span>LISTEN OUR</span>
+				<span class="small">LISTEN OUR</span>
 				<br>
 				HISTORY
 			</h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dignissimos error sed a earum laboriosam, ex dolores tempore nobis consectetur illo iusto laudantium veniam? Laboriosam tempore vitae fugit molestiae libero.</p>
 			<img src="docs/images/header-background.jpg" alt="image" width="320" height="240">
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, odio architecto? Vel ea aperiam saepe quidem esse molestias error blanditiis! Quos at repudiandae quaerat aliquid, vero molestiae doloremque laborum ex impedit, unde, dolores perferendis! Animi optio quo cum sit, facilis vero dolores? Incidunt sit esse in qui asperiores. Nam harum repellat eius, ratione molestias a, exercitationem excepturi, explicabo in magni quis temporibus corrupti. Nulla impedit, sunt, vel facilis quae ex aspernatur quasi illum corporis et illo vero doloremque molestias laborum officia, nisi cum iste voluptate maiores dolorum. Corporis, quaerat consequatur!</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsa officia expedita aut debitis praesentium reprehenderit minus numquam provident dolor consequuntur, nostrum placeat assumenda, quaerat doloribus esse eligendi totam nobis.</p>
+			<br>
+			<div id="read-more-contents">
+				<a id="read-more" class="pill pill--filled" onclick='hideMe'>READ MORE</a>
+			</div>
 		</section>
 
 		<section class="pouch">
