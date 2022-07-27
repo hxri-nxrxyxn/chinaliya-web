@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap');
 
 :root {
+	--color-primary: #ffeaa7;
+	--color-secondary: #6c5ce7;
+	--color-tertiary: #fff;
+	--color-text: #dfe6e9;
+	--color-border: #5a4eb7;
+	--layout-spacing: 3rem;
+}
+
+/* :root {
 	--color-primary: #55EFC4;
 	--color-secondary: #000;
 	--color-tertiary: #fff;
 	--color-text: #dfe6e9;
 	--color-border: #0F0F0F;
 	--layout-spacing: 3rem;
-}
+} */
 
 /* :root {
     --color-primary: #00b894;
@@ -78,7 +87,7 @@ img {
 
 .navbox__top--logo img {
     width: 10rem;
-    padding-top: 1rem;
+    padding-top: 5rem;
 }
 
 .navbox__top {
@@ -226,6 +235,12 @@ form button {
 
 .gallery__column p {
     margin: 2rem;
+}
+
+.gallery__column img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
 }
 
 @media screen and (min-width: 800px) {
