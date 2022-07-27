@@ -206,9 +206,6 @@ form input, form textarea {
 
 form input:hover, form textarea:hover {
     background-color: var(--color-border);
-}
-
-form input:focus, form textarea:focus {
     border: 2px solid var(--color-primary);
 }
 
