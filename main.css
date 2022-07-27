@@ -87,7 +87,7 @@ img {
 
 .navbox__top--logo img {
     width: 10rem;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 .navbox__top {
@@ -265,7 +265,6 @@ form button {
     }
 
     .navbox__bottom li {    
-        border: none;
         width: 45vw;
         margin: 0 auto;
     }
